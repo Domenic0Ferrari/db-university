@@ -18,3 +18,16 @@
 7) SELECT COUNT(*) AS `number_of_departments` FROM `departments`;
 
 8) SELECT * FROM `teachers` WHERE `phone` IS NULL;
+
+LIVE CODING
+- La virgola separa le colonne -
+
+1) SELECT `cfu`, COUNT(*) AS `number_courses` FROM `courses` GROUP BY `cfu`;
+
+2)SELECT YEAR(`date_of_birth`) AS `year_of_birth`, COUNT(*) AS `number_of_students` FROM `students` GROUP BY YEAR(`date_of_birth`);
+
+- Seleziono per ogni esame il voto più basso ricevuto -
+3)SELECT `exam_id`, MIN(`vote`) AS `min_vote` FROM `exam_student` GROUP BY `exam_id`;
+
+- Seleziono, per ogni giorno di luglio, quanti esami sono stati dati -
+4)SELECT DAY(`date`) AS `day`, COUNT(*) AS `number_of_exams` FROM `exams` WHERE MONTH(`date`) = 7 GROUP BY `day`;
