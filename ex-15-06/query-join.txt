@@ -33,7 +33,7 @@ ON `degrees`.`department_id` = `departments`.`id`
 ORDER BY `students`.`surname` ASC, `students`.`name` ASC;
 
 5. Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti:
-SELECT * 
+SELECT `teachers`.`name`,`teachers`.`surname`,`courses`.`name`,`degrees`.`name` 
 FROM `teachers` 
 JOIN `course_teacher`
 ON `teachers`.`id` = `course_teacher`.`teacher_id`
